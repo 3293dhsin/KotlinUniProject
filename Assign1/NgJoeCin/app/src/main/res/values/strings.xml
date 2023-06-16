@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Ng Joe Cin</string>
+    <string name="joe_cin">joe cin</string>
+    <string name="hello">Hello World!</string>
+    <string name="image_of_myself">Image of myself</string>
+    <string name="email">Email</string>
+    <string name="_102765534_students_swinburne_edu_my">102765534@students.swinburne.edu.my</string>
+    <string name="school">School</string>
+    <string name="my_school">Swinburne University of Technology Sarawak</string>
+    <string name="location">Location</string>
+    <string name="kuching_sarawak">Kuching, Sarawak</string>
+    <string name="course">Course</string>
+    <string name="bachelor_of_computer_science">Bachelor of Computer Science</string>
+    <string name="interests">Interests</string>
+    <string name="my_interests">Cooking is one of my hobbies. I enjoy spending time to cook for myself when I am free to keep my mind off the stress.</string>
+    <string name="ng_joe_cin">NG JOE CIN</string>
+</resources>
