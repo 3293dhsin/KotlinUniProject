@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/commons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/commons"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cuisine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cuisine_fusion"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commons"/>
+
+    <ImageView
+        android:id="@+id/commons_view"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/commons"
+        android:contentDescription="@string/commons_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cuisine"/>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="6dp"
+        android:paddingHorizontal="9dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commons_view"
+        />
+
+    <ImageView
+        android:id="@+id/address_view"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        app:srcCompat="@drawable/location"
+        android:contentDescription="@string/address_view"
+        android:layout_marginHorizontal="9dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@id/address"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/address_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/the_address"
+        android:layout_marginStart="45dp"
+        android:textColor="@color/red"
+        app:layout_constraintLeft_toRightOf="@id/address_view"
+        app:layout_constraintTop_toBottomOf="@id/address"/>
+
+    <TextView
+        android:id="@+id/opening_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/opening_hour"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingHorizontal="9dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_text"/>
+
+    <ImageView
+        android:id="@+id/clock_view"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:contentDescription="@string/clock_view"
+        app:srcCompat="@drawable/clock"
+        android:layout_marginHorizontal="9dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/opening_hours"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/clock_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clock_text"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/red"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toRightOf="@id/clock_view"
+        app:layout_constraintTop_toBottomOf="@id/opening_hours" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/clock_view"
+        android:layout_marginVertical="4dp"/>
+
+    <TextView
+        android:id="@+id/reviews"
+        android:layout_width="79dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="9dp"
+        android:text="@string/reviews"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clock_view" />
+
+    <ImageView
+        android:id="@+id/food_view"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:contentDescription="@string/food_view"
+        app:srcCompat="@drawable/food_icon"
+        android:layout_marginHorizontal="9dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/reviews"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/food"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintLeft_toRightOf="@id/food_view"
+        app:layout_constraintTop_toBottomOf="@id/reviews" />
+
+    <ImageView
+        android:id="@+id/drinks_view"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:contentDescription="@string/drinks_view"
+        app:srcCompat="@drawable/drinks_icon"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/reviews"
+        app:layout_constraintLeft_toRightOf="@id/food" />
+
+    <TextView
+        android:id="@+id/drinks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/drinks"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintLeft_toRightOf="@id/drinks_view"
+        app:layout_constraintTop_toBottomOf="@id/reviews" />
+
+    <ImageView
+        android:id="@+id/food_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/food_rating"
+        app:srcCompat="@drawable/love3_icon"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintTop_toBottomOf="@id/food"
+        app:layout_constraintLeft_toRightOf="@id/food_view" />
+
+    <ImageView
+        android:id="@+id/drinks_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/drinks_rating"
+        app:srcCompat="@drawable/love4_icon"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/drinks"
+        app:layout_constraintLeft_toRightOf="@id/drinks_view" />
+
+    <ImageView
+        android:id="@+id/service_view"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:contentDescription="@string/service_view"
+        app:srcCompat="@drawable/service_icon"
+        android:layout_marginHorizontal="9dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/food_rating"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintLeft_toRightOf="@id/service_view"
+        app:layout_constraintTop_toBottomOf="@id/food_rating" />
+
+    <ImageView
+        android:id="@+id/ambience_view"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:contentDescription="@string/ambience_view"
+        app:srcCompat="@drawable/ambience_icon"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/drinks_rating"
+        app:layout_constraintLeft_toRightOf="@id/food" />
+
+    <TextView
+        android:id="@+id/ambience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ambience"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintLeft_toRightOf="@id/drinks_view"
+        app:layout_constraintTop_toBottomOf="@id/drinks_rating" />
+
+    <ImageView
+        android:id="@+id/service_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/service_rating"
+        app:srcCompat="@drawable/love5_icon"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintTop_toBottomOf="@id/service"
+        app:layout_constraintLeft_toRightOf="@id/food_view" />
+
+    <ImageView
+        android:id="@+id/ambience_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/ambience_rating"
+        app:srcCompat="@drawable/love4_icon"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ambience"
+        app:layout_constraintLeft_toRightOf="@id/drinks_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
