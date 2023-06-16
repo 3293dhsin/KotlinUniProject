@@ -1,0 +1,51 @@
+Category:Pop
+Image:memories.png
+Title:Memories
+Website:https://youtu.be/SlPhMPnQ58k
+Release date: Sept 20, 2019
+Artist: Maroon 5
+Category:Pop
+Image:senorita.png
+Title:Senorita
+Website:https://youtu.be/xq866Q7GUlc
+Release date: June 21, 2019
+Artist: Shawn Mendes & Camila Cabello
+Category:Others
+Image:wild.png
+Title:Wild
+Genre: R&B
+Website:https://youtu.be/279RNoP5UyU
+Release date: June 19, 2020
+Artist: John Legend & Gary Clark Jr.
+Category:Others
+Image:beforeyougo.png
+Title:Before You Go
+Genre: Alternative
+Website:https://youtu.be/Jtauh8GcxBY
+Release date: Nov 1, 2019
+Artist: Lewis Capaldi
+Category:Pop
+Image:daisies.png
+Title:Daisies
+Website:https://youtu.be/NutHKRKBgR0
+Release date: May 15, 2020
+Artist: Katy Perry
+Category:Pop
+Image:idontcare.png
+Title:I Don't Care
+Website:https://youtu.be/CCSGelSCPGE
+Release date: May 10, 2019
+Artist: Ed Sheeran & Justin Bieber
+Category:Others
+Image:ihope.png
+Title:I Hope
+Genre: Country
+Website:https://youtu.be/qcCH6JpcK5w
+Release date: Aug 14, 2020
+Artist: Gabby Barrett
+Category:Pop
+Image:hardonyourself.png
+Title:Hard On Yourself
+Website:https://youtu.be/CCSGelSCPGE
+Release date: Aug 14, 2020
+Artist: Charlie Puth & Blackbear
