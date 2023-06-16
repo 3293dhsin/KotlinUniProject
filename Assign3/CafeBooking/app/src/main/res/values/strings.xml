@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TASK 1</string>
+    <string name="cafe1_name">Serendipity Cafe</string>
+    <string name="cafe2_name">Old Asian Cafe</string>
+    <string name="cafe3_name">International Taste</string>
+    <string name="cafe4_name">Gardenhouse Cafe</string>
+    <string name="cafe5_name">Spice Cafe</string>
+
+</resources>
