@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- id = use the same id as the fragment -->
+    <item
+        android:id="@+id/urgentFragment"
+        android:icon="@drawable/important"
+        android:title="Urgent List" />
+    <item
+        android:id="@+id/homeFragment2"
+        android:icon="@drawable/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/completedFragment"
+        android:icon="@drawable/completed"
+        android:title="Completed List" />
+</menu>

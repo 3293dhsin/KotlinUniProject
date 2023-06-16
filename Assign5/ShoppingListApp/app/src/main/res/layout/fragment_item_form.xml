@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintlayout_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="20dp"
+    tools:context=".AddItemFragment">
+
+    <TextView
+        android:id="@+id/textview_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="13"
+        android:paddingHorizontal="5dp"
+        android:hint="Shopping item"
+        android:backgroundTint="@color/green"
+        app:layout_constraintTop_toBottomOf="@id/textview_Name"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/textview_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/editText_Name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:ems="13"
+        android:paddingHorizontal="5dp"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:background="@drawable/edit_text_border"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textview_details"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/textview_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextMultiLine"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/imageButton_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_down"
+        android:background="@null"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_quantity"/>
+
+    <TextView
+        android:id="@+id/textview_quantitynum"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:ems="13"
+        android:text="1"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:background="@drawable/edit_text_border"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintLeft_toRightOf="@id/imageButton_down"
+        app:layout_constraintTop_toTopOf="@id/imageButton_down" />
+
+    <ImageButton
+        android:id="@+id/imageButton_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_up"
+        android:background="@null"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintLeft_toRightOf="@id/textview_quantitynum"
+        app:layout_constraintTop_toTopOf="@id/imageButton_down"/>
+
+    <TextView
+        android:id="@+id/textview_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="60dp"
+        app:layout_constraintRight_toRightOf="@id/editTextTextMultiLine"
+        app:layout_constraintTop_toTopOf="@id/textview_quantity"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="@id/textview_quantitynum"
+        app:layout_constraintLeft_toLeftOf="@id/textview_size" />
+
+    <CheckBox
+        android:id="@+id/checkBox_urgent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Urgent"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imageButton_down"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD TO LIST"
+        android:textSize="20sp"
+        android:background="@drawable/button_shape"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintTop_toBottomOf="@id/checkBox_urgent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
