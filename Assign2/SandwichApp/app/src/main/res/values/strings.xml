@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Task 3</string>
+    <string name="filling">Filling |</string>
+    <string name="side">Side |</string>
+    <string name="size">Size</string>
+    <string name="_6_inch">6 inch</string>
+    <string name="_9_inch">9 inch</string>
+    <string name="_12_inch">12 inch</string>
+    <string name="rm_0_00">RM 0.00</string>
+    <string name="total">Total:</string>
+</resources>
