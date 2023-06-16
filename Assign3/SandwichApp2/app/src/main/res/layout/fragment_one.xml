@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_one">
+
+    <ImageView
+    android:id="@+id/imageView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/sandwiches" />
+
+    <TextView
+        android:id="@+id/filling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/peach"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/filling"
+        android:textColor="@color/brown"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView1" />
+
+    <CheckBox
+        android:id="@+id/filling1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/cut_ham_icon"
+        app:layout_constraintEnd_toStartOf="@+id/filling2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filling"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:buttonTint="@color/red" />
+
+    <CheckBox
+        android:id="@+id/filling2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/chicken_icon"
+        app:layout_constraintEnd_toStartOf="@+id/filling3"
+        app:layout_constraintStart_toEndOf="@+id/filling1"
+        app:layout_constraintTop_toTopOf="@id/filling1"
+        android:buttonTint="@color/red"/>
+
+    <CheckBox
+        android:id="@+id/filling3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/beef_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/filling2"
+        app:layout_constraintTop_toTopOf="@id/filling1"
+        android:buttonTint="@color/red"/>
+
+    <CheckBox
+        android:id="@+id/filling4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/salmon_icon"
+        app:layout_constraintStart_toStartOf="@id/filling1"
+        app:layout_constraintTop_toBottomOf="@id/filling1"
+        android:buttonTint="@color/red"/>
+
+    <CheckBox
+        android:id="@+id/filling5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/kebab_icon2"
+        app:layout_constraintStart_toStartOf="@id/filling2"
+        app:layout_constraintTop_toTopOf="@id/filling4"
+        android:buttonTint="@color/red"/>
+
+    <TextView
+        android:id="@+id/side"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/peach"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/side"
+        android:textColor="@color/brown"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filling4" />
+
+    <CheckBox
+        android:id="@+id/side1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/tomato_icon"
+        app:layout_constraintEnd_toStartOf="@+id/side2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/side"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:buttonTint="@color/red"/>
+
+    <CheckBox
+        android:id="@+id/side2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/lettuce_icon"
+        app:layout_constraintEnd_toStartOf="@+id/side3"
+        app:layout_constraintStart_toEndOf="@+id/side1"
+        app:layout_constraintTop_toTopOf="@id/side1"
+        android:buttonTint="@color/red"/>
+
+    <CheckBox
+        android:id="@+id/side3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/onion_icon"
+        app:layout_constraintEnd_toStartOf="@+id/side4"
+        app:layout_constraintStart_toEndOf="@+id/side2"
+        app:layout_constraintTop_toTopOf="@id/side1"
+        android:buttonTint="@color/red"/>
+
+    <CheckBox
+        android:id="@+id/side4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/cheese_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/side3"
+        app:layout_constraintTop_toTopOf="@id/side1"
+        android:buttonTint="@color/red"/>
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/peach"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/size"
+        android:textColor="@color/brown"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/side1" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/size">
+
+        <RadioButton
+            android:id="@+id/radiobutton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="60dp"
+            android:text="@string/_6_inch"
+            android:buttonTint="@color/red" />
+
+        <RadioButton
+            android:id="@+id/radiobutton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:text="@string/_9_inch"
+            android:buttonTint="@color/red"/>
+
+        <RadioButton
+            android:id="@+id/radiobutton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_12_inch"
+            android:buttonTint="@color/red"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/nextpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:background="@color/brown"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
