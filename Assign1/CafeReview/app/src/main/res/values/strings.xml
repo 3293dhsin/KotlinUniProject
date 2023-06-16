@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Cafe Review</string>
+    <string name="commons">COMMONS</string>
+    <string name="cuisine_fusion">CUISINE: Fusion</string>
+    <string name="commons_image">Commons Image</string>
+    <string name="address">Address</string>
+    <string name="the_address">The Old Court House, Jalan Tun Abang Haji Openg, Kuching, 93000 Kuching, Sarawak</string>
+    <string name="opening_hours">Opening Hours</string>
+    <string name="monday_sunday_10_00_am_11_00_pm">Monday - Sunday | 10:00 am - 11:00 pm</string>
+    <string name="reviews">Reviews</string>
+    <string name="food">Food</string>
+    <string name="drinks">Drinks</string>
+    <string name="service">Service</string>
+    <string name="ambiance">Ambiance</string>
+    <string name="four_love_icon">FourLoveIcon</string>
+    <string name="five_love_icon">FiveLoveIcon</string>
+    <string name="ambiance_icon">Ambiance Icon</string>
+    <string name="service_icon">Service Icon</string>
+    <string name="three_love_icon">ThreeLoveIcon</string>
+    <string name="drinks_icon">drinks icon</string>
+    <string name="food_icon">food_icon</string>
+    <string name="clock_icon">clock_icon</string>
+    <string name="address_icon">address_icon</string>
+</resources>
