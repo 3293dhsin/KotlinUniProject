@@ -1,3 +1,3 @@
 ReadMe File
 
-<img src="images/UMLdiagram.png" width="100" height="100">
+<img src="images/UMLdiagram.png" width="auto" height="auto">
