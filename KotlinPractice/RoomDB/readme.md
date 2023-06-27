@@ -20,4 +20,4 @@
   <li><code>Data Entities</code> represent tables in the app's database.</li>
   <li><code>Data Access Objects(DAOs)</code> provide methods that the app can use to query, update, insert, and delete data in the database.</li>
 </ul>
-<img src="https://developer.android.com/static/images/training/data-storage/room_architecture.png" width="auto" height="auto">
+<img src="https://developer.android.com/static/images/training/data-storage/room_architecture.png" width="500" height="500">
