@@ -44,10 +44,10 @@
 <p>The following code defines a DAO called UserDao. It allows us to use methods to interact with data in the user table. </p>
 <pre>
   <code>
-    @Dao
+    <kbd>@Dao</code>kbd>
     interface UserDao {
       @Query("SELECT * FROM user")
-      fun getAll(): List<User> <br> <br>
+      fun getAll(): List<User>
       @Query("SELECT * FROM user WHERE uid IN (:userIds)")
       fun loadAllByIds(userIds: IntArray): List<User>
       @Query("SELECT * FROM user WHERE first_name LIKE :first AND " + "last_name LIKE :last LIMIT 1")
