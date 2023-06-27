@@ -88,12 +88,13 @@
 <p>The following shows how you can use the the defined functions.</p>
 <pre>
   <code>
-    
     val db = Room.databaseBuilder(
         applicationContext,
         AppDatabase::class.java, "database-name"
     ).build()
-
+    
+  <code>
+  <code>
     val userDao = db.userDao()
     val users: List<User> = userDao.getAll()
   </code>
