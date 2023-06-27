@@ -2,7 +2,7 @@
 
 <h2>Layouts</h2>
 <p>There are three commonly used layouts which are Row Layout, Column Layout and Box Layout.</p>
-<ul>
+<ol>
   <li>Row Layout</li>
   <pre>
     <code>
@@ -15,4 +15,4 @@
       }
     </code>
   </pre>
-</ul>
+</ol>
