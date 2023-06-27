@@ -32,7 +32,7 @@
 <p>The following code defines a User data entity which represents a User table with attributes uid, first_name, and last_name.</p>
 <pre>
   <code>
-    <mark>@Entity</mark>
+    @Entity
     data class User(
         @PrimaryKey val uid: Int,
         @ColumnInfo(name = "first_name") val firstName: String?,
@@ -47,19 +47,16 @@
     @Dao
     interface UserDao {
       @Query("SELECT * FROM user")
-      fun getAll(): List<User>
-
+      fun getAll(): List<User> <br>
       @Query("SELECT * FROM user WHERE uid IN (:userIds)")
       fun loadAllByIds(userIds: IntArray): List<User>
-
       @Query("SELECT * FROM user WHERE first_name LIKE :first AND " + "last_name LIKE :last LIMIT 1")
       fun findNyName(first: String, last:String): User
-
       @Insert
       fun insertAll(vararg users: User)
-
       @Delete 
       fun delete(user: User)
+    }
     
   </code>
 </pre>
