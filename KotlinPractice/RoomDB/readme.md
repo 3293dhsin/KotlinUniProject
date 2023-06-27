@@ -1,4 +1,4 @@
-<h2>Local Database - Room</h2>
+<h1>Local Database - Room</h1>
 
 <h3>Why using Room instead of SQLite</h3>
 <p>Room persistence library provides abstraction layer over SQLite to allow fluent database access while harnessing the full power of SQLite.</p>
