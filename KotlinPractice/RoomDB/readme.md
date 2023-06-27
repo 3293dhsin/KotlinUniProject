@@ -10,9 +10,13 @@
 
 <h2>Setup</h2>
 <p>Include the following dependencies to your app's <i>build.gradle</i> file.</p>
-<code>val room_version = "2.5.2"
- implementation("androidx.room:room-runtime:$room_version")
- annotationProcessor("androidx.room:room-compiler:$room_version")</code>
+<pre>
+  <code>
+    val room_version = "2.5.2"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+  </code>
+</pre>
 
 <h2>Primary Components</h2>
 <p>There are three major components in Room:</p>
@@ -25,7 +29,7 @@
 
 <h2>Sample Implementation</h2>
 <h3>Data Entity</h3>
-<p>The following code defines a User data entity which represents a User table.</p>
+<p>The following code defines a User data entity which represents a User table with attributes uid, first_name, and last_name.</p>
 <pre>
   <code>
     @Entity
