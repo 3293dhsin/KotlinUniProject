@@ -46,27 +46,32 @@
   <code>
     <var>@Dao</var>
     interface UserDao {
-    
-        // Select all the users
-        @Query("SELECT * FROM user")
-        fun getAll(): List<User>
-
-        // Select users by their ids
-        @Query("SELECT * FROM user WHERE uid IN (:userIds)")
-        fun loadAllByIds(userIds: IntArray): List<User>
-
-        // Select user by his/her name
-        @Query("SELECT * FROM user WHERE first_name LIKE :first AND " + "last_name LIKE :last LIMIT 1")
-        fun findNyName(first: String, last:String): User
-
-        // Add user into the table
-        @Insert
-        fun insertAll(vararg users: User)
-
-        // Delete user from the table
-        @Delete 
-        fun delete(user: User)
-    }
+  </code>
+  <code>
+    // Select all the users
+    @Query("SELECT * FROM user")
+    fun getAll(): List<User>
+  </code>
+  <code>
+    // Select users by their ids
+    @Query("SELECT * FROM user WHERE uid IN (:userIds)")
+    fun loadAllByIds(userIds: IntArray): List<User>
+  </code>
+  <code>
+    // Select user by his/her name
+    @Query("SELECT * FROM user WHERE first_name LIKE :first AND " + "last_name LIKE :last LIMIT 1")
+    fun findNyName(first: String, last:String): User
+  </code>
+  <code>
+    // Add user into the table
+    @Insert
+    fun insertAll(vararg users: User)
+  </code>
+  <code>
+    // Delete user from the table
+    @Delete 
+    fun delete(user: User)
+  }
   </code>
 </pre>
 <h3>Database</h3>
