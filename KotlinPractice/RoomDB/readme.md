@@ -92,7 +92,6 @@
         applicationContext,
         AppDatabase::class.java, "database-name"
     ).build()
-    
   <code>
   <code>
     val userDao = db.userDao()
