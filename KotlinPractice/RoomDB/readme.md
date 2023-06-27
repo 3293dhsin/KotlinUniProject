@@ -67,7 +67,7 @@
         @Delete 
         fun delete(user: User)
     }
-</code>
+  </code>
 </pre>
 <h3>Database</h3>
 <p>The following code defines an AppDatabase class to hold the database. We must define a database in such way:</p>
