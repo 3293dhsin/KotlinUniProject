@@ -32,7 +32,7 @@
 <p>The following code defines a User data entity which represents a User table with attributes uid, first_name, and last_name.</p>
 <pre>
   <code>
-    @Entity
+    <var>@Entity</var>
     data class User(
         @PrimaryKey val uid: Int,
         @ColumnInfo(name = "first_name") val firstName: String?,
@@ -54,6 +54,7 @@
       fun findNyName(first: String, last:String): User
       @Insert
       fun insertAll(vararg users: User)
+        
       @Delete 
       fun delete(user: User)
     }
