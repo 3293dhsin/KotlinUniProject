@@ -12,9 +12,9 @@
 <p>Include the following dependencies to your app's <i>build.gradle</i> file.</p>
 <pre>
   <code>
-    val room_version = "2.5.2"
-    implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
+    def room_version = "2.5.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
   </code>
 </pre>
 
