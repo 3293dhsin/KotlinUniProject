@@ -32,11 +32,34 @@
 <p>The following code defines a User data entity which represents a User table with attributes uid, first_name, and last_name.</p>
 <pre>
   <code>
-    @Entity
+    <mark>@Entity</mark>
     data class User(
         @PrimaryKey val uid: Int,
         @ColumnInfo(name = "first_name") val firstName: String?,
         @ColumnInfo(name = "last_name") val lastName: String?
     )
+  </code>
+</pre>
+<h3>Data Access Object(DAOs)</h3>
+<p>The following code defines a DAO called UserDao. It allows us to use methods to interact with data in the user table. </p>
+<pre>
+  <code>
+    @Dao
+    interface UserDao {
+      @Query("SELECT * FROM user")
+      fun getAll(): List<User>
+
+      @Query("SELECT * FROM user WHERE uid IN (:userIds)")
+      fun loadAllByIds(userIds: IntArray): List<User>
+
+      @Query("SELECT * FROM user WHERE first_name LIKE :first AND " + "last_name LIKE :last LIMIT 1")
+      fun findNyName(first: String, last:String): User
+
+      @Insert
+      fun insertAll(vararg users: User)
+
+      @Delete 
+      fun delete(user: User)
+    
   </code>
 </pre>
