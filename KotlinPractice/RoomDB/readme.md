@@ -44,7 +44,7 @@
 <p>The following code defines a DAO called UserDao. It allows us to use methods to interact with data in the user table. </p>
 <pre>
   <code>
-    <kbd>@Dao</code>kbd>
+    <var>@Dao</var>
     interface UserDao {
       @Query("SELECT * FROM user")
       fun getAll(): List<User>
