@@ -9,7 +9,7 @@
       Row (
         horizontalArrangement = Arrangement.Center,
         modifier = Modifier.fillMaxSize()
-      ){
+      ) {
         Text(text = "Row1")
         Text(text = "Row1")
       }
@@ -28,6 +28,27 @@
       ) {
         Text(text = "Column1")
         Text(text = "Column2")
+      }
+    </code>
+  </pre>
+
+  <li>Box Layout</li>
+  <pre>
+    <code>
+      Box (
+        modifier = Modifier.fillMaxSize()
+      ) {
+        Text(
+          text = "Hello $name!",
+          color = Color.Red,
+          fontSize = 30.sp,
+          modifier = Modifier.align(Alignment.BottomCenter)
+        )
+        Text(
+            text = "Some other text",
+            color = Color.Red,
+            fontSize = 30.sp
+        )
       }
     </code>
   </pre>
