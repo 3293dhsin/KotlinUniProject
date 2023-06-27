@@ -8,7 +8,7 @@
   <li>Streamlined database migration paths.</li>
 </ul>
 <h3>Setup</h3>
-<p>Include the following dependencies to your app's <span style="background-color: #FFFF00">build.gradle</span> file.</p>
+<p>Include the following dependencies to your app's <i>build.gradle</i> file.</p>
 <code>val room_version = "2.5.2"
  implementation("androidx.room:room-runtime:$room_version")
  annotationProcessor("androidx.room:room-compiler:$room_version")</code>
