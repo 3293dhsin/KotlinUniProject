@@ -46,6 +46,7 @@
   <code>
     <var>@Dao</var>
     interface UserDao {
+      // Select all the users
       @Query("SELECT * FROM user")
       fun getAll(): List<User>
         
