@@ -67,13 +67,13 @@
         @Delete 
         fun delete(user: User)
     }
-    
-  </code>
+</code>
 </pre>
 
 <h3>Database</h3>
 <p>The following code defines an AppDatabase class to hold the database. We must define a database in such way:</p>
 <ul>
   <li>The class must be annotatetd with a <code>@Database</code> annotation that includes an <code>entities</code> array that lists all of the data entities associated with the database.</li>
-  
+  <li>The class must be an abstract class that extends RoomDatabase.</li>
+  <li>Each DAO class must be defined as an <code>abstract</code> method in the database class that has zero argument and returns an instance of the DAO class.</li>
 </ul>
