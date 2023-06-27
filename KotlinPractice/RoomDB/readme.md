@@ -66,8 +66,7 @@
         // Delete user from the table
         @Delete 
         fun delete(user: User)
-    }
-</code>
+    }</code>
 </pre>
 
 <h3>Database</h3>
