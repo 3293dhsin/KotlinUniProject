@@ -28,7 +28,7 @@
       ) {
         Text(text = "Column1")
         Text(text = "Column2")
-    }
+      }
     </code>
   </pre>
 </ol>
