@@ -26,4 +26,13 @@
 <h2>Sample Implementation</h2>
 <h3>Data Entity</h3>
 <p>The following code defines a User data entity which represents a User table.</p>
-<iframe src="https://example.com/embedded-page" title="Embedded Page Title" width=”” height=””></iframe>
+<pre>
+  <code>
+    @Entity
+    data class User(
+        @PrimaryKey val uid: Int,
+        @ColumnInfo(name = "first_name") val firstName: String?,
+        @ColumnInfo(name = "last_name") val lastName: String?
+    )
+  </code>
+</pre>
