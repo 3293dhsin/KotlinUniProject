@@ -32,7 +32,16 @@
 <p>The following code defines a User data entity which represents a User table with attributes uid, first_name, and last_name.</p>
 <pre>
   <code>
-    <var>@Entity</var>
+    <var>@Entity(tableName="users")</var>
+    data class User(
+        @PrimaryKey val uid: Int,
+        @ColumnInfo(name = "first_name") val firstName: String?,
+        @ColumnInfo(name = "last_name") val lastName: String?
+    )
+  </code>
+  <code>
+    // Composite Key
+    <var>@Entity(primaryKeys = ["firstName", "lastName"])</var>
     data class User(
         @PrimaryKey val uid: Int,
         @ColumnInfo(name = "first_name") val firstName: String?,
@@ -40,6 +49,7 @@
     )
   </code>
 </pre>
+
 <h3>Data Access Object(DAOs)</h3>
 <p>The following code defines a DAO called UserDao. It allows us to use methods to interact with data in the user table. </p>
 <pre>
@@ -74,6 +84,7 @@
   }
   </code>
 </pre>
+      
 <h3>Database</h3>
 <p>The following code defines an AppDatabase class to hold the database. We must define a database in such way:</p>
 <ul>
@@ -89,7 +100,8 @@
     }
   </code>
 </pre>
-<h3>Usage</h3>
+
+<h2>Usage</h2>
 <p>The following shows how you can use the the defined functions.</p>
 <pre>
   <code>
