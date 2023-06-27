@@ -19,7 +19,7 @@
   <li>Column Layout</li>
   <pre>
     <code>
-      Column(
+      Column (
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
