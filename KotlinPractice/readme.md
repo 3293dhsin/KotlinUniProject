@@ -1,6 +1,7 @@
 <h1>Jetpack Compose UI</h1>
 
-<h2>There are three commonly used layouts which are Row Layout, Column Layout and Box Layout.</h2>
+<h2>Layouts</h2>
+<p>There are three commonly used layouts which are Row Layout, Column Layout and Box Layout.</p>
 <ul>
   <li>Row Layout</li>
   <pre>
