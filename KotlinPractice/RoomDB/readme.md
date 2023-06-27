@@ -70,3 +70,10 @@
     
   </code>
 </pre>
+
+<h3>Database</h3>
+<p>The following code defines an AppDatabase class to hold the database. We must define a database in such way:</p>
+<ul>
+  <li>The class must be annotatetd with a <code>@Database</code> annotation that includes an <code>entities</code> array that lists all of the data entities associated with the database.</li>
+  
+</ul>
