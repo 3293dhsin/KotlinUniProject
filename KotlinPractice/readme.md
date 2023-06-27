@@ -27,7 +27,7 @@
           .background(Color.White)
       ) {
         Text(text = "Column1")
-        Text(text = "Row1")
+        Text(text = "Column2")
     }
     </code>
   </pre>
