@@ -76,3 +76,24 @@
   <li>The class must be an abstract class that extends RoomDatabase.</li>
   <li>Each DAO class must be defined as an <code>abstract</code> method in the database class that has zero argument and returns an instance of the DAO class.</li>
 </ul>
+<pre>
+  <code>
+    @Database(entities = [User::class], version = 1)
+    abstract class AppDatabase: RoomDatabase() {
+      abstract fun userDao(): UserDao
+    }
+  </code>
+</pre>
+<h3>Usage</h3>
+<p>The following shows how you can use the the defined functions.</p>
+<pre>
+  <code>
+    val db = Room.databaseBuilder(
+        applicationContext,
+        AppDatabase::class.java, "database-name"
+    ).build()
+    
+    val userDao = db.userDao()
+    val users: List<User> = userDao.getAll()
+  </code>
+</pre>
