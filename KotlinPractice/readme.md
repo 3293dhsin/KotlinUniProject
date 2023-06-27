@@ -45,9 +45,9 @@
           modifier = Modifier.align(Alignment.BottomCenter)
         )
         Text(
-            text = "Some other text",
-            color = Color.Red,
-            fontSize = 30.sp
+          text = "Some other text",
+          color = Color.Red,
+          fontSize = 30.sp
         )
       }
     </code>
