@@ -12,3 +12,11 @@
 <code>val room_version = "2.5.2"
  implementation("androidx.room:room-runtime:$room_version")
  annotationProcessor("androidx.room:room-compiler:$room_version")</code>
+
+<h3>Primary Components</h3>
+<p>There are three major components in Room:</p>
+<ul>
+  <li><code>Database class</code> holds the database and serves as the main access point for the underlying connection to the app's persisted data.</li>
+  <li><code>Data Entities</code> represent tables in the app's database.</li>
+  <li><code>Data Access Objects(DAOs)</code> provide methods that the app can use to query, update, insert, and delete data in the database.</li>
+</ul>
