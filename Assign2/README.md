@@ -18,6 +18,6 @@ This is a simple food menu platform for users to view menu, and view order. We l
 
 <div style="display: flex; justify-content: center;">
     <img src="image-3.png" width="200" height="auto" style="margin: 10px; padding: 10px;">
-    <img src="image-4.png" width="400" height="auto" style="margin: 10px; padding: 10px;">
+    <img src="image-4.png" width="200" height="auto" style="margin: 10px; padding: 10px;">
     <img src="image-5.png" width="200" height="auto" style="margin: 10px; padding: 10px;">
 </div>
