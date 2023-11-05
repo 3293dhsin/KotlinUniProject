@@ -4,9 +4,8 @@ In this assignment, we were tested on our programming logic and get familiarised
 
 ## Task 1: Device rotation game
 
-![Device rotation 1](image.png)
-
-
-![Device rotation 2](image-1.png)
-
-![Device rotation 3](image-2.png)
+<div style="display: flex; justify-content: center;">
+    <img src="image.png" width="200" height="auto" style="margin: 5px;">
+    <img src="image-1.png" width="200" height="auto" style="margin: 5px;">
+    <img src="image-2.png" width="200" height="auto" style="margin: 5px;">
+</div>
