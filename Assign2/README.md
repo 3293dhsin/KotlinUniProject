@@ -16,7 +16,7 @@ This is a simple device rotation game for two players. They rotate the phone to 
 
 ## Task 2: Sandwich app
 
-This is a simple sandwich ordering platform for users to view menu, and view order. We use UI event listeners to display the selected item on the screen after the selection is clicked and display order details after the button is clicked.
+This is a simple sandwich ordering platform for users to view menu, and view order. We use UI event listeners to display the selected item on the screen after the selection is clicked and display order details after the button is clicked. Besides, we use the LinkedHashMap to record and track the selection and its price. 
 
 <div>
     <img src="images/image-3.png" width="200" height="auto" style="margin: 10px; padding: 10px;">
