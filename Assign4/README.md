@@ -16,6 +16,6 @@ This is a simple image gallery app which reads the text file to get the song lis
 
 ## Task 2: Image Gallery App
 
-
+This is a simple image gallery app which 
 
 

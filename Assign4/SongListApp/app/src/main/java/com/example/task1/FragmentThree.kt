@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.os.Build
+import android.util.Log
+import android.webkit.WebChromeClient
 
 private const val ARG_PARAM1 = "param1"
 
@@ -28,6 +31,8 @@ class FragmentThree : Fragment() {
         val view = inflater.inflate(R.layout.fragment_three, container, false)
         val webView = view.findViewById<WebView>(R.id.webview)
         webView.settings.javaScriptEnabled = true
+        webView.settings.setAllowFileAccess(true)
+        webView.settings.setAllowContentAccess(true)
         webView.webViewClient = WebViewClient()
         website?.let { webView.loadUrl(it) }
         return view
