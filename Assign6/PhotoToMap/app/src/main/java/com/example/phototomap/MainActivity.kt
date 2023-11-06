@@ -9,6 +9,8 @@ import android.os.Bundle
 import android.os.Environment
 import android.os.Looper
 import android.provider.MediaStore
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.FileProvider
@@ -34,43 +36,48 @@ class MainActivity : AppCompatActivity() {
     lateinit var dbHelper: DBHelper
     var currentImagePath: String? = null
     private var locationList = ArrayList<Location>()
+    var LOCATION_PERMISSION_REQUEST_CODE = 2
+
     companion object {
         var IMAGE_REQUEST: Int = 1
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         dbHelper = DBHelper(this)
-        //dbHelper.deleteLocationList()
         locationList = dbHelper.getLocationList()
         mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(OnMapReadyCallback {
-            // once the map is ready, this callback will be executed
             googleMap = it
-            if (ActivityCompat.checkSelfPermission(
+
+            // Check for location permissions and request them if necessary
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ||
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // Request location permissions
+                ActivityCompat.requestPermissions(
                     this,
-                    Manifest.permission.ACCESS_FINE_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                    this,
-                    Manifest.permission.ACCESS_COARSE_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED
-            ) { }
-            // enable the current location of your device
-            googleMap.isMyLocationEnabled = true
-            for (i in locationList) {
-                var j = LatLng(i.latitude, i.longitude)
-                googleMap.addMarker(MarkerOptions().position(j))
-                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(j, 12f))
-            }
-            googleMap.setOnMarkerClickListener {
-                var address = getAddress(it.position)
-                locationList = dbHelper.getLocationList()
+                    arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION),
+                    LOCATION_PERMISSION_REQUEST_CODE
+                )
+            } else {
+                // enable the current location of your device
+                googleMap.isMyLocationEnabled = true
                 for (i in locationList) {
-                    if (it.position.longitude == i.longitude && it.position.latitude == i.latitude) {
-                        openBottomSheet(address, i.image)
-                    }
+                    var j = LatLng(i.latitude, i.longitude)
+                    googleMap.addMarker(MarkerOptions().position(j))
+                    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(j, 12f))
                 }
-                true
+                googleMap.setOnMarkerClickListener {
+                    var address = getAddress(it.position)
+                    locationList = dbHelper.getLocationList()
+                    for (i in locationList) {
+                        if (it.position.longitude == i.longitude && it.position.latitude == i.latitude) {
+                            openBottomSheet(address, i.image)
+                        }
+                    }
+                    true
+                }
             }
         })
         var floatingactionbtn: FloatingActionButton = findViewById(R.id.floatingActionButton)
@@ -79,26 +86,53 @@ class MainActivity : AppCompatActivity() {
             getCurrentLocation()
         }
     }
+
     private fun openBottomSheet(address: String, image: String) {
         var bottomSheetFragment = BottomSheetFragment.newInstance(address, image)
         bottomSheetFragment.show(supportFragmentManager, "")
     }
+
     private fun captureImage() {
-        var cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        if (cameraIntent.resolveActivity(packageManager)!=null) {
-            var imageFile: File? = null
-            try {
-                imageFile = getImageFile()
-            } catch (e: IOException) {
-                e.printStackTrace()
-            }
-            if (imageFile!=null) {
-                var imageURI: Uri = FileProvider.getUriForFile(this,"com.example.android.fileprovider", imageFile)
-                cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageURI)
-                startActivityForResult(cameraIntent, IMAGE_REQUEST)
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            // Request camera permission
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.CAMERA),
+                IMAGE_REQUEST
+            )
+        } else {
+            val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            if (isCameraAvailable(cameraIntent)) {
+                // There is a camera app available, proceed with capturing the image
+                val imageFile: File?
+                try {
+                    imageFile = getImageFile()
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                    return
+                }
+                if (imageFile != null) {
+                    val imageURI: Uri = FileProvider.getUriForFile(
+                        this,
+                        "com.example.android.fileprovider",
+                        imageFile
+                    )
+                    cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageURI)
+                    startActivityForResult(cameraIntent, IMAGE_REQUEST)
+                }
+            } else {
+                // There is no camera app available, show an error message or take appropriate action
+                Toast.makeText(this, "No camera app available", Toast.LENGTH_SHORT).show()
             }
         }
     }
+
+    private fun isCameraAvailable(intent: Intent): Boolean {
+        val packageManager = packageManager
+        val list = packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY)
+        return list.isNotEmpty()
+    }
+
     private fun getImageFile(): File {
         var timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
         var imageName: String = "jpg_" + timeStamp + "_"
@@ -107,6 +141,7 @@ class MainActivity : AppCompatActivity() {
         currentImagePath = imageFile.absolutePath
         return imageFile
     }
+
     private fun getCurrentLocation() {
         var locationRequest = com.google.android.gms.location.LocationRequest()
         locationRequest.setInterval(10000)
@@ -143,6 +178,7 @@ class MainActivity : AppCompatActivity() {
             Looper.getMainLooper()
         )
     }
+
     private fun getAddress(mycoordinates: LatLng): String {
         var geocoder = Geocoder(this, Locale.getDefault())
         var addresses: List<Address> = geocoder.getFromLocation(mycoordinates.latitude, mycoordinates.longitude, 1)
