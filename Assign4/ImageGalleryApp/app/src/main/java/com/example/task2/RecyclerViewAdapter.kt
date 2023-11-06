@@ -45,7 +45,7 @@ class RecyclerViewAdapter(
     override fun getItemCount(): Int = list.size
     private fun displayImage(imageview: ImageView, position: Int) {
         Glide.with(context)
-            .load("http://192.168.0.172/android/img/" + list.get(position).imagethumb)
+            .load("http://10.0.2.2/android/img/" + list.get(position).imagethumb)
             .override(400,400)
             .into(imageview)
     }

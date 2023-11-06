@@ -1,6 +1,7 @@
 package com.example.task2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 
@@ -17,7 +18,7 @@ class MainActivity2 : AppCompatActivity() {
     }
     private fun displayImage(image: String) {
         Glide.with(this)
-            .load("http://192.168.0.172/android/img/" + image)
+            .load("http://10.0.2.2/android/img/" + image)
             .override(1000,1000)
             .into(imageview)
     }

@@ -1,6 +1,7 @@
 package com.example.task2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
@@ -64,6 +65,7 @@ class MainActivity : AppCompatActivity(), ChckBoxList {
     private fun getImgThumbList() {
 
         val imageApi = RetrofitHelper.getInstance().create(ImageApi::class.java).getImages()
+        Log.d("imageapi", "!1111")
 
         // create an asynchronous call for the network request
         imageApi.enqueue(object : Callback<ArrayList<image>?> {
