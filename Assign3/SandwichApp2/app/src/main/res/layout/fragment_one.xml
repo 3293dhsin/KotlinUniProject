@@ -191,8 +191,8 @@
         android:text="Next"
         android:background="@color/brown"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/radiogroup"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

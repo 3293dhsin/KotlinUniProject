@@ -1,0 +1,20 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/dell/AndroidStudioProjects/Assignments/COS30017-ASSIGN1/CafeReview2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/COS30017-ASSIGN1/CafeReview2/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/COS30017_A1/CafeReview2/app/src/main/res/layout-hdpi/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/COS30017_A1/CafeReview2/app/src/main/res/layout-xhdpi/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/COS30017_A1/CafeReview2/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/CafeReview2/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
