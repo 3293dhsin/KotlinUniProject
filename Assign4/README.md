@@ -16,6 +16,14 @@ This is a simple image gallery app which reads the text file to get the song lis
 
 ## Task 2: Image Gallery App
 
-This is a simple image gallery app which 
+This is a simple image gallery app which retrieves data from localhost XAMPP database and displays them with checkboxes. We use Retrofit to retrieve data and Glide library to load the photos retrieved.
 
-
+<div>
+    <img src="images/image-3.png" width="200" height="auto" style="margin: 10px; padding: 10px;">
+    &nbsp;
+    <img src="images/image-4.png" width="200" height="auto" style="margin: 10px; padding: 10px;">
+    &nbsp;
+    <img src="images/image-5.png" width="200" height="auto" style="margin: 10px; padding: 10px;">
+    &nbsp;
+    <img src="images/image-6.png" width="200" height="auto" style="margin: 10px; padding: 10px;">
+</div>
