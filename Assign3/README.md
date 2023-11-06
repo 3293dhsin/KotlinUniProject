@@ -18,7 +18,7 @@ This is a simple cafe booking app. We use recycler view to display all the cafe 
 
 ## Task 2: Sandwich App 2
 
-This is the sandwich app continuing from assign 2. We use fragments to navigate different pages. The main activity is used to manage two fragments and implement the interfaces in both fragments to handle button clicks and data passing between fragments. 
+This is the continuation of the sandwich app from assign 2. We use fragments to navigate different pages. The main activity is used to manage two fragments and implement the interfaces in both fragments to handle button clicks and data passing between fragments. After selecting all the required fields and clicking on the "next" button, the fragment 2 will be displayed to view the order. 
 
 <div>
     <img src="images/image-4.png" width="200" height="auto" style="margin: 10px; padding: 10px;">
