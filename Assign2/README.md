@@ -8,15 +8,13 @@ This is a simple device rotation game for two players. They rotate the phone to 
 
 <div style="display: flex; justify-content: center;">
     <div style="margin: 10px; padding: 10px;">
-        <img src="images/image.png" width="200" height="auto" style="margin: 10px; padding: 10px;">
+        <img src="images/image.png" width="200" height="auto">
     </div>
-    &nbsp;
     <div style="margin: 10px; padding: 10px;">
-        <img src="images/image-1.png" width="400" height="auto" style="margin: 10px; padding: 10px;">
+        <img src="images/image-1.png" width="400" height="auto">
     </div>
-    &nbsp;
     <div>   
-        <img src="images/image-2.png" width="200" height="auto" style="margin: 10px; padding: 10px;">
+        <img src="images/image-2.png" width="200" height="auto">
     </div>
 </div>
 
